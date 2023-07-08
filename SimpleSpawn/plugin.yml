@@ -1,0 +1,26 @@
+main: davigamer161.simplespawn.SimpleSpawn
+version: 1.0.1
+name: SimpleSpawn
+
+commands:
+  simplespawn.*:
+    default: op
+    description: Todos los permisos
+  setspawn:
+    description: Crear el spawn
+  spawn:
+    description: Ir al spawn
+  simplespawn:
+    description: Comando principal
+    aliases: [ss]
+permissions:
+  simplespawn.spawn:
+    description: Sirve para ir al spawn
+  simplespawn.spawn.others:
+    description: Sirve para llevar a otro al spawn
+  simplespawn.reload:
+    description: Sirve para recargar el plugin
+  simplespawn.help:
+    description: Sirve para ver lista de comandos
+  simplespawn.version:
+    description: Sirve para ver la version del plugin

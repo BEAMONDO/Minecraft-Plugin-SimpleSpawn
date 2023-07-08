@@ -1,0 +1,35 @@
+Config:
+  help-message: true
+  help-text:
+  - '&b<-----------------&aCOMMANDS&b----------------->'
+  - '&e/ss help &7Show this message'
+  - '&e/ss version &7Show plugin version'
+  - '&e/ss reload &7Reload plugin'
+  - '&e/setspawn &7Create a spawn'
+  - '&e/spawn &7Teleport to spawn'
+  - '&e/spawn <player> &7Teleport others to spawn''
+  setspawn-message: true
+  setspawn-text:
+  - '%plugin% &aSpawn has been placed'
+  spawn-message: true
+  spawn-text:
+  - '%plugin% &aYou teleported to spawn'
+  spawn-not-exist-text:
+  - '%plugin% &aSpawn doesn`t exist'
+  no-perm-spawn-others-text:
+  - '%plugin% &cimpossible teleport &f%target% &cto spawn'
+  reload-message: true
+  reload-text:
+  - '%plugin% &aThe plugin has been reloaded'
+  version-message: true
+  version-text:
+  - '%plugin% &aPlugin version: &b%version%'
+  command-no-argument: true
+  command-no-argument-text:
+  - '%plugin% &fUse &e/ss help &fto see the command list'
+  no-perm: true
+  no-perm-text:
+  - '%plugin% &cYou don`t have permission to use that command'
+  console-error-text:
+  - You can`t use that command in console
+

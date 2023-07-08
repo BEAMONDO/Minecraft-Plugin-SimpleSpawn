@@ -1,0 +1,33 @@
+Config:
+  help-message: true
+  help-text:
+  - '&b<-----------------&aCOMANDOS&b----------------->'
+  - '&e/ss help &7Muestra este mensaje'
+  - '&e/ss version &7Version del plugin'
+  - '&e/ss reload &7Recargar el plugin'
+  - '&e/setspawn &7Crear el spawn'
+  - '&e/spawn &7Ir al spawn'
+  - '&e/spawn <player> &7Llevar a otro jugador al spawn'
+   setspawn-message: true
+  setspawn-text:
+  - '%plugin% &aEl spawn ha sido colocado'
+  spawn-message: true
+  spawn-text:
+  - '%plugin% &aTe has teletransportado al spawn'
+  spawn-not-exist-text:
+  - '%plugin% &aEl spawn no existe'
+  no-perm-spawn-others-text:
+  - '%plugin% &cimposible teletransportar a &f%target% &cal spawn'
+  reload-message: true
+  reload-text:
+  - '%plugin% &aEl plugin ha sido recargado'
+  version-message: true
+  version-text:
+  - '%plugin% &aVersion &b%version%'
+  command-no-argument-text:
+  - '%plugin% &fUsa &e/ss help &fpara ver la lista de comandos'
+  no-perm: true
+  no-perm-text:
+  - '%plugin% &cNo tienes permiso para ejecutar ese comando'
+  console-error-text: 
+  - 'No puedes ejecutar ese comando desde la consola'
