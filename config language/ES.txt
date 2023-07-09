@@ -16,8 +16,6 @@ Config:
   - '%plugin% &aTe has teletransportado al spawn'
   spawn-not-exist-text:
   - '%plugin% &aEl spawn no existe'
-  no-perm-spawn-others-text:
-  - '%plugin% &cimposible teletransportar a &f%target% &cal spawn'
   reload-message: true
   reload-text:
   - '%plugin% &aEl plugin ha sido recargado'

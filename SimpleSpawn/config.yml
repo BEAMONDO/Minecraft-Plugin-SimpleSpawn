@@ -16,8 +16,6 @@ Config:
   - '%plugin% &aYou teleported to spawn'
   spawn-not-exist-text:
   - '%plugin% &aSpawn doesn`t exist'
-  no-perm-spawn-others-text:
-  - '%plugin% &cimpossible teleport &f%target% &cto spawn'
   reload-message: true
   reload-text:
   - '%plugin% &aThe plugin has been reloaded'
