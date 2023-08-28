@@ -25,7 +25,7 @@ Messages:
   version:
   - '%plugin% &aVersion &b%version%'
   command-no-argument:
-  - '%plugin% &fUsa &e/sf help &fpara ver la lista de comandos'
+  - '%plugin% &fUsa &e/ss help &fpara ver la lista de comandos'
   no-perm:
   - '%plugin% &cNo tienes permiso para ejecutar ese comando'
   console-error:
