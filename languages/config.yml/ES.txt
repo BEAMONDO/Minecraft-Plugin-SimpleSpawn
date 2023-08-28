@@ -18,15 +18,15 @@
 # ################################################################################## #
 
 
-#   help-message: enable or disable the command message "/ss help"
-#   reload-message: enable or disable the command message "/ss reload"
-#   version-message: enable or disable the command message "/ss version"
-#   spawn-message: enable or disable the command message "/spawn" and "/spawn <player>"
-#   setspawn-message: enable or disable the command message "/setspawn"
-#   pay-to-spawn: enable or disable the option to pay to spawn (if enable is necessary the plugin Vault)
-#   spawn-price: amount to pay if use "/spawn" command if (pay-to-spawn) is enable
-#   no-argument-message: enable or disable the command message "/ss" if it not have any argument
-#   no-perm-message: enable or disable message when use a command and don`t have permission
+#   help-message: activar o desactivar el mensaje del comando "/ss help"
+#   reload-message: activar o desactivar el mensaje del comando "/ss reload"
+#   version-message: activar o desactivar el mensaje del comando "/ss version"
+#   spawn-message: activar o desactivar el mensaje del comando "/spawn" y "/spawn <player>"
+#   setspawn-message: activar o desactivar el mensaje del comando "/setspawn"
+#   pay-to-spawn: activar o desactivar la opcion de pagar para ir al spawn (si se activa es necesario el plugin Vault)
+#   spawn-price: cantidad a pagar al usar "/spawn" si la opcion (pay-to-spawn) esta activa
+#   no-argument-message: activar o desactivar el mensaje del comando "/ss" en el caso de no tener ningun argumento
+#   no-perm-message: activar o desactivar el mensaje para cuando usas un comando y no tienes permiso
 
 
 Config:

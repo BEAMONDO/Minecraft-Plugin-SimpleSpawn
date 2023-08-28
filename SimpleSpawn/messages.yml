@@ -1,0 +1,32 @@
+Messages:
+  setspawn:
+  - '%plugin% &aSpawn has been placed'
+  spawn:
+    no-exist:
+    - '%plugin% &cSpawn doesn`t exist'
+    teleport:
+    - '%plugin% &aYou teleported to spawn'
+    no-money-to-teleport:
+    - '%plugin% &cYou don`t have enough money to teleport to spawn'
+    teleport-others:
+    - '%plugin% &aYou teleport &6%target% &ato spawn'
+    no-money-to-teleport-others:
+    - '%plugin% &cYou don`t have enough money to teleport &6%target% &cto spawn'
+  help:
+  - '&b<-----------------&aCOMMANDS&b----------------->'
+  - '&e/ss help &7Show this message'
+  - '&e/ss version &7Show plugin version'
+  - '&e/ss reload &7Reload plugin'
+  - '&e/setspawn &7Create a spawn'
+  - '&e/spawn &7Teleport to spawn'
+  - '&e/spawn <player> &7Teleport others to spawn'
+  reload:
+  - '%plugin% &aThe plugin has been reloaded'
+  version:
+  - '%plugin% &aPlugin version: &b%version%'
+  command-no-argument:
+  - '%plugin% &fUse &e/ss help &fto see the command list'
+  no-perm:
+  - '%plugin% &cYou don`t have permission to use that command'
+  console-error:
+  - You can`t use that command in console

@@ -1,6 +1,7 @@
 main: davigamer161.simplespawn.SimpleSpawn
-version: 1.0.1
+version: 1.3.2
 name: SimpleSpawn
+softdepend: [Vault]
 
 commands:
   simplespawn.*:
@@ -16,6 +17,8 @@ commands:
 permissions:
   simplespawn.spawn:
     description: Sirve para ir al spawn
+  simplespawn.setspawn:
+    description: Sirve para crear el spawn
   simplespawn.spawn.others:
     description: Sirve para llevar a otro al spawn
   simplespawn.reload:

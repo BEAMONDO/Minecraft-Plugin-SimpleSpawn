@@ -24,6 +24,7 @@ public class ComandoSetSpawn implements CommandExecutor{
     public boolean onCommand(CommandSender sender, Command comando, String label, String[] args){
     if(sender instanceof Player){
 	    FileConfiguration config = plugin.getConfig();
+        FileConfiguration messages = plugin.getMessages();
 	    Player jugador = (Player) sender;
 		    if(jugador.hasPermission("simplespawn.setspawn")){
                 Location l = jugador.getLocation();
@@ -42,16 +43,16 @@ public class ComandoSetSpawn implements CommandExecutor{
                 plugin.saveConfig();
                 String path = "Config.setspawn-message";
                 if(config.getString(path).equals("true")){
-                    List<String> mensaje = config.getStringList("Config.setspawn-text");
+                    List<String> mensaje = messages.getStringList("Messages.setspawn");
                     for(int i=0;i<mensaje.size();i++){
                         String texto = mensaje.get(i);
                         jugador.sendMessage(ChatColor.translateAlternateColorCodes('&', texto.replaceAll("%player%", jugador.getName()).replaceAll("%plugin%", plugin.nombre).replaceAll("%version%", plugin.version)));
                     }
                 }
             }else{
-                String path = "Config.no-perm";
+                String path = "Config.no-perm-message";
                 if(config.getString(path).equals("true")){
-                    List<String> mensaje = config.getStringList("Config.no-perm-text");
+                    List<String> mensaje = messages.getStringList("Messages.no-perm");
                     for(int i=0;i<mensaje.size();i++){
                         String texto = mensaje.get(i);
                         jugador.sendMessage(ChatColor.translateAlternateColorCodes('&', texto.replaceAll("%player%", jugador.getName()).replaceAll("%plugin%", plugin.nombre).replaceAll("%version%", plugin.version)));

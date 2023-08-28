@@ -22,8 +22,8 @@ public class ComandoPrincipal implements CommandExecutor{
 
     public boolean onCommand(CommandSender sender, Command comando, String label, String[] args) {
         if(!(sender instanceof Player)){
-            FileConfiguration config = plugin.getConfig();
-            List<String> mensaje = config.getStringList("Config.console-error-text");
+            FileConfiguration messages = plugin.getMessages();
+            List<String> mensaje = messages.getStringList("Messages.console-error");
                 for(int i=0;i<mensaje.size();i++){
                     String texto = mensaje.get(i);
                     Bukkit.getConsoleSender().sendMessage(texto);
@@ -32,6 +32,7 @@ public class ComandoPrincipal implements CommandExecutor{
         else{
             Player jugador = (Player) sender;
             FileConfiguration config = plugin.getConfig();
+            FileConfiguration messages = plugin.getMessages();
         if(args.length > 0){     
 //-------------------------------------Comando version----------------------------------------------------------//
 //----------------------------------------Desde aqui---------------------------------------//
@@ -39,7 +40,7 @@ public class ComandoPrincipal implements CommandExecutor{
         if(sender instanceof Player && (jugador.hasPermission("simplespawn.version"))){
             String path = "Config.version-message";
             if(config.getString(path).equals("true")){
-                List<String> mensaje = config.getStringList("Config.version-text");
+                List<String> mensaje = messages.getStringList("Messages.version");
                 for(int i=0;i<mensaje.size();i++){
                     String texto = mensaje.get(i);
                     jugador.sendMessage(ChatColor.translateAlternateColorCodes('&', texto.replaceAll("%player%", jugador.getName()).replaceAll("%plugin%", plugin.nombre).replaceAll("%version%", plugin.version)));
@@ -47,9 +48,9 @@ public class ComandoPrincipal implements CommandExecutor{
             }
             return true;
         }if(sender instanceof Player && !(jugador.hasPermission("simplespawn.version"))){
-            String path = "Config.no-perm";
+            String path = "Config.no-perm-message";
             if(config.getString(path).equals("true")){
-                List<String> mensaje = config.getStringList("Config.no-perm-text");
+                List<String> mensaje = messages.getStringList("Messages.no-perm");
                 for(int i=0;i<mensaje.size();i++){
                     String texto = mensaje.get(i);
                     jugador.sendMessage(ChatColor.translateAlternateColorCodes('&', texto.replaceAll("%player%", jugador.getName()).replaceAll("%plugin%", plugin.nombre).replaceAll("%version%", plugin.version)));
@@ -67,7 +68,7 @@ public class ComandoPrincipal implements CommandExecutor{
                     if(sender instanceof Player && (jugador.hasPermission("simplespawn.help"))){
                         String path = "Config.help-message";
                         if(config.getString(path).equals("true")){
-                            List<String> mensaje = config.getStringList("Config.help-text");
+                            List<String> mensaje = messages.getStringList("Messages.help");
                             for(int i=0;i<mensaje.size();i++){
                                 String texto = mensaje.get(i);
                                 jugador.sendMessage(ChatColor.translateAlternateColorCodes('&', texto.replaceAll("%player%", jugador.getName()).replaceAll("%plugin%", plugin.nombre).replaceAll("%version%", plugin.version)));
@@ -75,9 +76,9 @@ public class ComandoPrincipal implements CommandExecutor{
                         }
                         return true;
                     }if(sender instanceof Player && !(jugador.hasPermission("simplespawn.help"))){
-                        String path = "Config.no-perm";
+                        String path = "Config.no-perm-message";
                       if(config.getString(path).equals("true")){
-                          List<String> mensaje = config.getStringList("Config.no-perm-text");
+                          List<String> mensaje = messages.getStringList("Messages.no-perm");
                          for(int i=0;i<mensaje.size();i++){
                                String texto = mensaje.get(i);
                               jugador.sendMessage(ChatColor.translateAlternateColorCodes('&', texto.replaceAll("%player%", jugador.getName()).replaceAll("%plugin%", plugin.nombre).replaceAll("%version%", plugin.version)));
@@ -95,8 +96,9 @@ public class ComandoPrincipal implements CommandExecutor{
                     if(sender instanceof Player && (jugador.hasPermission("simplespawn.reload"))){
                         String path = "Config.reload-message";
                         plugin.reloadConfig();
+                        plugin.reloadMessages();
                         if(config.getString(path).equals("true")){
-                            List<String> mensaje = config.getStringList("Config.reload-text");
+                            List<String> mensaje = messages.getStringList("Messages.reload");
                             for(int i=0;i<mensaje.size();i++){
                                 String texto = mensaje.get(i);
                                 jugador.sendMessage(ChatColor.translateAlternateColorCodes('&', texto.replaceAll("%player%", jugador.getName()).replaceAll("%plugin%", plugin.nombre).replaceAll("%version%", plugin.version)));
@@ -104,9 +106,9 @@ public class ComandoPrincipal implements CommandExecutor{
                         }
                         return true;
                     }if(sender instanceof Player && !(jugador.hasPermission("simplespawn.reload"))){
-                        String path = "Config.no-perm";
+                        String path = "Config.no-perm-message";
                         if(config.getString(path).equals("true")){
-                            List<String> mensaje = config.getStringList("Config.no-perm-text");
+                            List<String> mensaje = messages.getStringList("Messages.no-perm");
                             for(int i=0;i<mensaje.size();i++){
                                 String texto = mensaje.get(i);
                                 jugador.sendMessage(ChatColor.translateAlternateColorCodes('&', texto.replaceAll("%player%", jugador.getName()).replaceAll("%plugin%", plugin.nombre).replaceAll("%version%", plugin.version)));
@@ -119,9 +121,9 @@ public class ComandoPrincipal implements CommandExecutor{
 
             }else{
                 if(sender instanceof Player && (jugador.hasPermission("simplespawn.help"))){
-                String path = "Config.command-no-argument";
+                String path = "Config.no-argument-message";
                 if(config.getString(path).equals("true")){
-                    List<String> mensaje = config.getStringList("Config.command-no-argument-text");
+                    List<String> mensaje = messages.getStringList("Messages.command-no-argument");
                     for(int i=0;i<mensaje.size();i++){
                         String texto = mensaje.get(i);
                         jugador.sendMessage(ChatColor.translateAlternateColorCodes('&', texto.replaceAll("%player%", jugador.getName()).replaceAll("%plugin%", plugin.nombre).replaceAll("%version%", plugin.version)));
@@ -129,9 +131,9 @@ public class ComandoPrincipal implements CommandExecutor{
                 }
                 return true;
             }else if(sender instanceof Player && !(jugador.hasPermission("simplespawn.help"))){
-               String path = "Config.no-perm";
+               String path = "Config.no-perm-message";
                 if(config.getString(path).equals("true")){
-                    List<String> mensaje = config.getStringList("Config.no-perm-text");
+                    List<String> mensaje = messages.getStringList("Messages.no-perm");
                     for(int i=0;i<mensaje.size();i++){
                         String texto = mensaje.get(i);
                         jugador.sendMessage(ChatColor.translateAlternateColorCodes('&', texto.replaceAll("%player%", jugador.getName()).replaceAll("%plugin%", plugin.nombre).replaceAll("%version%", plugin.version)));
