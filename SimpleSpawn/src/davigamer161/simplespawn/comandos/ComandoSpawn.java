@@ -36,7 +36,10 @@ public class ComandoSpawn implements CommandExecutor{
         			double dinero = econ.getBalance(jugador);
        				int precio = Integer.valueOf(config.getString("Config.spawn-price"));
                     if(config.contains("Config.spawn.x")){
-                        if(dinero >=precio){
+                        if(jugador.hasPermission("simplespawn.econ.exempt")){
+                            teleportMethod(jugador);
+                            spawnMethod(jugador);
+                        }else if(dinero >=precio){
                             econ.withdrawPlayer(jugador, precio);
                             teleportMethod(jugador);
                             spawnMethod(jugador);
@@ -72,7 +75,18 @@ public class ComandoSpawn implements CommandExecutor{
         		double dinero = econ.getBalance(jugador);
        			int precio = Integer.valueOf(config.getString("Config.spawn-price"));
                 Player target = Bukkit.getPlayer(args[0]);
-                if(dinero >=precio){
+                if(jugador.hasPermission("simplespawn.econ.exempt.others")){
+                    teleportMethod(target);
+                    spawnMethod(target);
+                    String path = "Config.spawn-message";
+                    if(config.getString(path).equals("true")){
+                        List<String> mensaje = messages.getStringList("Messages.spawn.teleport-others");
+                        for(int i=0;i<mensaje.size();i++){
+                            String texto = mensaje.get(i);
+                            jugador.sendMessage(ChatColor.translateAlternateColorCodes('&', texto.replaceAll("%player%", jugador.getName()).replaceAll("%plugin%", plugin.nombre).replaceAll("%version%", plugin.version).replaceAll("%target%", target.getName())));
+                        }
+                    }
+                }else if(dinero >=precio){
                     econ.withdrawPlayer(jugador, precio);
                     teleportMethod(target);
                     spawnMethod(target);
