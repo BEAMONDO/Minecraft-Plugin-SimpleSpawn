@@ -41,14 +41,14 @@ public class SimpleSpawn extends JavaPlugin{
     //------------------------------Desde aqui-----------------------------//
     public void onEnable(){
       Bukkit.getConsoleSender().sendMessage(ChatColor.BLUE+"<------------------------------------>");
-	    Bukkit.getConsoleSender().sendMessage(nombre+ChatColor.WHITE+"Enabled, ("+ChatColor.GREEN+"Version: "+ChatColor.AQUA+version+ChatColor.WHITE+")");
+	  Bukkit.getConsoleSender().sendMessage(nombre+ChatColor.WHITE+"Enabled, ("+ChatColor.GREEN+"Version: "+ChatColor.AQUA+version+ChatColor.WHITE+")");
       if(setupEconomy()){
-        Bukkit.getConsoleSender().sendMessage(nombre+ChatColor.YELLOW+"Vault "+ChatColor.GREEN+"found");
+      Bukkit.getConsoleSender().sendMessage(nombre+ChatColor.YELLOW+"Vault "+ChatColor.GREEN+"found");
       }else{
         Bukkit.getConsoleSender().sendMessage(nombre+ChatColor.YELLOW+"Vault "+ChatColor.RED+"not found");
       }
-	    Bukkit.getConsoleSender().sendMessage(nombre+ChatColor.GOLD+"Thanks for use my plugin :)");
-	    Bukkit.getConsoleSender().sendMessage(nombre+ChatColor.YELLOW+"Made by "+ChatColor.LIGHT_PURPLE+"davigamer161");
+	  Bukkit.getConsoleSender().sendMessage(nombre+ChatColor.GOLD+"Thanks for use my plugin :)");
+	  Bukkit.getConsoleSender().sendMessage(nombre+ChatColor.YELLOW+"Made by "+ChatColor.LIGHT_PURPLE+"davigamer161");
       Bukkit.getConsoleSender().sendMessage(ChatColor.BLUE+"<------------------------------------>");
       registrarComandos();
       registrarConfig();
