@@ -3,9 +3,9 @@
 # |                                                                                | #
 # |                                                                                | #
 # |                                                                                | #
-# |                __          __        ___       __   __   __                    | #
-# |               /__` | |\/| |__) |    |_        /__` |__) |__| \    / |\ |       | #
-# |               .__/ | |  | |    |___ |___      .__/ |    |  |  \/\/  | \|       | #
+# |             __          __        ___       __   __   __                       | #
+# |            /__` | |\/| |__) |    |_        /__` |__) |__| \    / |\ |          | #
+# |            .__/ | |  | |    |___ |___      .__/ |    |  |  \/\/  | \|          | #
 # |                                                                                | #
 # |                                                                                | #
 # |                                                                                | #
@@ -18,24 +18,21 @@
 # ################################################################################## #
 
 
-#   help-message: enable or disable the command message "/ss help"
-#   reload-message: enable or disable the command message "/ss reload"
-#   version-message: enable or disable the command message "/ss version"
+#   update-message: enable or disable the update message when enter in server
+#   no-argument-message: enable or disable the command message "/sh" if it not have any argument
+#   no-perm-message: enable or disable message when use a command and don`t have permission
+
 #   spawn-message: enable or disable the command message "/spawn" and "/spawn <player>"
 #   setspawn-message: enable or disable the command message "/setspawn"
-#   pay-to-spawn: enable or disable the option to pay to spawn (if enable is necessary the plugin Vault)
+#   pay-to-spawn: enable or disable the option to pay to spawn (if enable is necessary the plugin Vault and EssentialsX)
 #   spawn-price: amount to pay if use "/spawn" command if (pay-to-spawn) is enable
-#   no-argument-message: enable or disable the command message "/ss" if it not have any argument
-#   no-perm-message: enable or disable message when use a command and don`t have permission
 
 
 Config:
-  help-message: true
-  reload-message: true
-  version-message: true
+  update-message: true
+  no-argument-message: true
+  no-perm-message: true
   setspawn-message: true
   spawn-message: true
   pay-to-spawn: false
   spawn-price: 1000
-  no-argument-message: true
-  no-perm-message: true

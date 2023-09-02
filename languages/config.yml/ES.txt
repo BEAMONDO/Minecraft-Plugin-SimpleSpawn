@@ -18,24 +18,21 @@
 # ################################################################################## #
 
 
-#   help-message: activar o desactivar el mensaje del comando "/ss help"
-#   reload-message: activar o desactivar el mensaje del comando "/ss reload"
-#   version-message: activar o desactivar el mensaje del comando "/ss version"
-#   spawn-message: activar o desactivar el mensaje del comando "/spawn" y "/spawn <player>"
-#   setspawn-message: activar o desactivar el mensaje del comando "/setspawn"
-#   pay-to-spawn: activar o desactivar la opcion de pagar para ir al spawn (si se activa es necesario el plugin Vault)
-#   spawn-price: cantidad a pagar al usar "/spawn" si la opcion (pay-to-spawn) esta activa
+#   update-message: activar o desactivar el mensaje de actualizacion disponible al entrar al servidor
 #   no-argument-message: activar o desactivar el mensaje del comando "/ss" en el caso de no tener ningun argumento
 #   no-perm-message: activar o desactivar el mensaje para cuando usas un comando y no tienes permiso
 
+#   setspawn-message: activar o desactivar el mensaje del comando "/setspawn"
+#   spawn-message: activar o desactivar el mensaje del comando "/spawn" y "/spawn <player>"
+#   pay-to-spawn: activar o desactivar la opcion de pagar para ir al spawn (si se activa es necesario el plugin Vault y EssentialsX)
+#   spawn-price: cantidad a pagar al usar "/spawn" si la opcion (pay-to-spawn) esta activa
+
 
 Config:
-  help-message: true
-  reload-message: true
-  version-message: true
+  update-message: true
+  no-argument-message: true
+  no-perm-message: true
   setspawn-message: true
   spawn-message: true
   pay-to-spawn: false
   spawn-price: 1000
-  no-argument-message: true
-  no-perm-message: true

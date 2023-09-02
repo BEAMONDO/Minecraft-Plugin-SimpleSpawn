@@ -1,12 +1,9 @@
 main: davigamer161.simplespawn.SimpleSpawn
-version: 1.4.3
+version: 2.0.1
 name: SimpleSpawn
 softdepend: [Vault]
 
 commands:
-  simplespawn.*:
-    default: op
-    description: Todos los permisos
   setspawn:
     description: Crear el spawn
   spawn:
@@ -15,19 +12,26 @@ commands:
     description: Comando principal
     aliases: [ss]
 permissions:
-  simplespawn.setspawn:
-    description: Sirve para crear el spawn
-  simplespawn.spawn:
-    description: Sirve para ir al spawn
-  simplespawn.spawn.others:
-    description: Sirve para llevar a otro al spawn
+  simplespawn.*:
+    default: op
+    description: Todos los permisos
   simplespawn.reload:
     description: Sirve para recargar el plugin
   simplespawn.help:
     description: Sirve para ver lista de comandos
   simplespawn.version:
     description: Sirve para ver la version del plugin
+  simplespawn.plugin:
+    description: Sirve para ver el link de descarga del plugin
+  simplespawn.updatechecker:
+    description: Sirve para comprobar si hay una nueva version del plugin
   simplespawn.econ.exempt:
     description: Sirve para no pagar al usar /spawn
   simplespawn.econ.exempt.others:
     description: Sirve para no pagar al usar /spawn para otros
+  simplespawn.setspawn:
+    description: Sirve para crear el spawn
+  simplespawn.spawn:
+    description: Sirve para ir al spawn
+  simplespawn.spawn.others:
+    description: Sirve para llevar a otro al spawn
