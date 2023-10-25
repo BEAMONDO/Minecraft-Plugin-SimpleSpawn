@@ -1,13 +1,15 @@
 main: davigamer161.simplespawn.SimpleSpawn
-version: 2.0.1
+version: 2.1.1
 name: SimpleSpawn
 softdepend: [Vault]
 
 commands:
   setspawn:
     description: Crear el spawn
+    aliases: [setlobby]
   spawn:
     description: Ir al spawn
+    aliases: [lobby]
   simplespawn:
     description: Comando principal
     aliases: [ss]

@@ -19,7 +19,7 @@
 
 
 #   update-message: enable or disable the update message when enter in server
-#   no-argument-message: enable or disable the command message "/sh" if it not have any argument
+#   no-argument-message: enable or disable the command message "/ss" if it not have any argument
 #   no-perm-message: enable or disable message when use a command and don`t have permission
 
 #   spawn-message: enable or disable the command message "/spawn" and "/spawn <player>"
